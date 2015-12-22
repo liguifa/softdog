@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- jQuery -->
+		<script src="static/easyui/jquery.min.js"></script>
+		<!-- easyui -->
+		<script src="static/easyui/jquery.easyui.min.js"></script>
+		<script src="static/easyui/locale/easyui-lang-zh_CN.js"></script>
+		<link href="static/easyui/themes/black/easyui.css" rel="stylesheet" type="text/css" />
+		<link href="static/easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+		<!-- index -->
+		<script src="static/js/index.js"></script>
+		<link href="static/css/index.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body id="body">   
+		<div id="context" class="easyui-panel">  
+			<a href="javascript:void(0)" id="menu-file">文件</a>   
+			<div id="menu-file-sub"  class="menu-sub">
+				<div data-options="iconCls:'icon-add'">新建</div>   
+    			<div data-options="iconCls:'icon-open'">打开</div>   
+    			<div class="menu-sep"></div>   
+    			<div data-options="iconCls:'icon-save'">保存</div>   
+    			<div data-options="iconCls:'icon-saveas'">另存为</div>   
+				<div class="menu-sep"></div>   
+				<div data-options="iconCls:'icon-exit'">退出</div>     
+			</div> 
+			<a href="javascript:void(0)" id="menu-edit">编辑</a>   
+			<div id="menu-edit-sub" class="menu-sub">
+				<div data-options="iconCls:'icon-undo'">撤销</div>   
+    			<div data-options="iconCls:'icon-redo'">恢复</div>   
+    			<div class="menu-sep"></div>   
+    			<div>剪切</div>   
+    			<div>复制</div>   
+				<div>黏贴</div> 
+				<div>全选</div> 
+				<div class="menu-sep"></div>   
+				<div>查找</div> 
+				<div>替换</div> 
+			</div>  
+			<a href="javascript:void(0)" id="menu-setting">设置</a>   
+			<div id="menu-setting-sub" class="menu-sub">
+				<div data-options="iconCls:'icon-undo'">撤销</div>   
+    			<div data-options="iconCls:'icon-redo'">恢复</div>   
+    			<div class="menu-sep"></div>   
+    			<div>剪切</div>   
+    			<div>复制</div>   
+				<div>黏贴</div> 
+				<div>全选</div> 
+				<div class="menu-sep"></div>   
+				<div>查找</div> 
+				<div>替换</div> 
+			</div> 
+			<a href="javascript:void(0)" id="menu-about">关于</a>   
+			<div id="menu-about-sub" class="menu-sub">
+				<div data-options="iconCls:'icon-help',id:'41'">帮助</div>   
+    			<div data-options="iconCls:'icon-author'" id="menu-about-author">作者</div>   
+			</div>  
+   			<table class="easyui-datagrid">   
+				<thead>   
+					<tr>   
+						<th data-options="field:'code'">编码</th>   
+						<th data-options="field:'name'">名称</th>   
+						<th data-options="field:'price'">价格</th>   
+					</tr>   
+				</thead>   
+				<tbody>   
+					<tr>   
+						<td>001</td><td>name1</td><td>2323</td>   
+					</tr>   
+					<tr>   
+						<td>002</td><td>name2</td><td>4612</td>   
+					</tr>   
+				</tbody>   
+			</table>  
+		</div> 
+	</body>  
+</html>
