@@ -1,3 +1,5 @@
+var gui = require('nw.gui');
+var win = gui.Window.get();
 $(document).ready(function()
 {
 	$("#context").panel(
@@ -8,7 +10,11 @@ $(document).ready(function()
 		collapsible:true,
 		minimizable:true,
 		maximizable:true,
-		closable:true
+		closable:true,
+		onBeforeClose:function()
+		{
+			win.close();
+		}
 	});  
 	$('#menu-file').menubutton(
 	{      
@@ -44,6 +50,11 @@ function InvokeMenuMethod(id)
 			AboutAuthor();
 			break;
 		}
+		case "menu-file-open":
+		{
+			OpenFile();
+			break;
+		}
 	}
 }
 
@@ -60,5 +71,29 @@ function AboutAuthor()
 		minimizable:false,
 		maximizable:false,
 		closable:true
+	});
+}
+
+function OpenFile()
+{
+	
+	$("#body").append("<div id='fileWindow'></div>");
+	$('#fileWindow').window(
+	{    
+		width:600,    
+		height:400,    
+		modal:true,
+		title:"打开文件",
+		collapsible:false,
+		minimizable:false,
+		maximizable:false,
+		closable:true,
+		content:"<ul id='files'></ul>"
+	});
+	$("#files").tree(
+	{
+		data: ReadDir("D:\\"),
+		animate:true,
+		lines:true
 	});
 }
